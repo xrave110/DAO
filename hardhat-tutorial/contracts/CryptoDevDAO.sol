@@ -57,7 +57,7 @@ contract CryptoDevsDAO is Ownable {
         mapping(uint256 => bool) voters;
     }
     //Create a mapping ID to Proposal
-    mapping(uint256 => Proposal) proposals;
+    mapping(uint256 => Proposal) public proposals;
     //Number of proposals that have been created
     uint256 public numProposals;
     IFakeNFTMarketplace nftMarketplace;

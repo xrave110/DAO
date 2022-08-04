@@ -1,4 +1,4 @@
-export const CRYPTODEVS_DAO_CONTRACT_ADDRESS = "0x801B4EE9ACA8e2856fAa17692e5D7D963176c793";
+export const CRYPTODEVS_DAO_CONTRACT_ADDRESS = "0x196DE5072db57f4e67dE849682Fb477771e6340a";
 export const CRYPTODEVS_NFT_CONTRACT_ADDRESS = "0x23CC21700170c6D253975C90242518E884688051";
 
 export const CRYPTODEVS_DAO_ABI = [
@@ -100,6 +100,45 @@ export const CRYPTODEVS_DAO_ABI = [
         "type": "function"
     },
     {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "proposals",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "nftTokenId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "deadline",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "yayVotes",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "nayVotes",
+                "type": "uint256"
+            },
+            {
+                "internalType": "bool",
+                "name": "executed",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
         "inputs": [],
         "name": "renounceOwnership",
         "outputs": [],
@@ -147,7 +186,8 @@ export const CRYPTODEVS_DAO_ABI = [
     {
         "stateMutability": "payable",
         "type": "receive"
-    }];
+    }
+];
 export const CRYPTODEVS_NFT_ABI = [{
     "inputs": [
         {

@@ -10,7 +10,6 @@ import {
   CRYPTODEVS_NFT_CONTRACT_ADDRESS,
 } from "../constants";
 import styles from "../styles/Home.module.css";
-import image0 from "../public/0.svg";
 
 export default function Home() {
   // ETH Balance of the DAO contract
@@ -120,10 +119,13 @@ export default function Home() {
   // and sets the `proposals` state variable
   const fetchAllProposals = async () => {
     try {
+      let i = 0
+      let idx = 0
       const proposals = [];
-      for (let i = 0; i < numProposals; i++) {
-        const proposal = await fetchProposalById(i);
+      for (idx = 0; idx < Number(numProposals); idx++) {
+        const proposal = await fetchProposalById(idx);
         proposals.push(proposal);
+        i++;
       }
       setProposals(proposals);
       return proposals;
@@ -374,8 +376,7 @@ export default function Home() {
           {renderTabs()}
         </div>
         <div>
-          KURWA!!
-          <img className={styles.image} src={image0} />
+          <img className={styles.image} src='1.svg' />
         </div>
       </div>
 
